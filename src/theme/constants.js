@@ -3,6 +3,7 @@ const colours = {
   darkGreyBlue: 'hsl(215, 19%, 25%)',
   paleOrange: 'hsl(25, 94%, 86%)',
   lightCream: 'hsl(43, 78%, 98%)',
+  darkCream: 'hsl(43,30%,94%)',
   grey: 'hsl(215, 5%, 54%)'
 }
 

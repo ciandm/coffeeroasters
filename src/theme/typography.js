@@ -1,6 +1,6 @@
-import { css } from 'styled-components';
+import styled from 'styled-components';
 
-const BigTitle = css`
+const BigTitle = styled.h1`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
@@ -9,7 +9,7 @@ const BigTitle = css`
   text-transform: lowercase;
 `
 
-const H1 = css`
+const H1 = styled.h1`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
@@ -17,15 +17,20 @@ const H1 = css`
   line-height: 72px;
 `
 
-const H2 = css`
+const H2 = styled.h2`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    font-size: 40px;
+    line-height: 48px;
+  }
 `
 
-const H3 = css`
+const H3 = styled.h3`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
@@ -33,7 +38,7 @@ const H3 = css`
   line-height: 36px;
 `
 
-const H4 = css`
+const H4 = styled.h4`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
@@ -41,7 +46,7 @@ const H4 = css`
   line-height: 32px;
 `
 
-const Body = css`
+const Body = styled.p`
   font-family: Barlow;
   font-style: normal;
   font-weight: normal;
@@ -49,7 +54,7 @@ const Body = css`
   line-height: 26px;
 `
 
-const SmallCaps = css`
+const SmallCaps = styled.p`
   font-family: Barlow;
   font-style: normal;
   font-weight: normal;
