@@ -1,4 +1,11 @@
 const subscribeData = {
+  listItems: [
+    'Preferences',
+    'Bean Type',
+    'Quantity',
+    'Grind Option',
+    'Deliveries'
+  ],
   selection: [
     {
       id: "preference",

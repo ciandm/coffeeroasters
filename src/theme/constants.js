@@ -1,5 +1,6 @@
 const colours = {
   darkCyan: 'hsl(179, 81%, 29%)',
+  darkerCyan: 'hsl(179, 81%, 25%)',
   darkGreyBlue: 'hsl(215, 19%, 25%)',
   paleOrange: 'hsl(25, 94%, 86%)',
   lightCream: 'hsl(43, 78%, 98%)',

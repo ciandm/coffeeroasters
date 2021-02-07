@@ -8,6 +8,7 @@ function Subscribe() {
     <div>
       <SubscriptionProvider>
         <CoffeeSelection
+          listItems={subscribeData.listItems}
           selectionOptions={subscribeData.selection}
         />
       </SubscriptionProvider>

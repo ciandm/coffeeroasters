@@ -105,11 +105,13 @@ function SubscriptionProvider({ children }) {
       })
       return;
     }
+
     // if user selects one that doesn't already have something selected, increment the steps completed
     if (subscription.selection[option.id] === '') {
       dispatch({
         type: ACTIONS.INCREMENT_STEPS_COMPLETED
       })
+
       // increment current step, to animate in accordion of next question. If the user has selected Capsules and the 4th question is disabled, increment by 2. 
       // 5 is the limit of questions, so it should not extend beyond this.
       if (subscription.currentStep < 5) {
@@ -121,6 +123,7 @@ function SubscriptionProvider({ children }) {
         })
       }
     }
+
     // if the user selects an option that is higher than the currentStep, bring the currentStep up to that number and open all of the corresponding accordions.
     if (subscription.currentStep < option.questionNumber) {
       dispatch({
@@ -130,6 +133,7 @@ function SubscriptionProvider({ children }) {
         }
       })
     }
+
     // select the option the user has chosen
     dispatch({
       type: ACTIONS.SELECT,
@@ -138,6 +142,7 @@ function SubscriptionProvider({ children }) {
         name: option.name
       }
     });
+
     // if the user selects capsule, reset grind option
     if (option.name === 'Capsule') {
       dispatch({

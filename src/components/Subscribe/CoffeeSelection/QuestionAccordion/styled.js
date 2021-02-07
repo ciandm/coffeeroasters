@@ -31,6 +31,23 @@ export const Question = styled(H2)`
   color: ${({ theme }) => theme.colours.grey};
   flex: 1;
   padding-right: 9rem;
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    padding-right: 8rem;
+  }
+`
+
+export const DropdownButton = styled.button`
+  align-items: center;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  outline: none;
+
+  &:focus {
+    outline: 1px solid ${({ theme }) => theme.colours.darkCyan};
+  }
 `
 
 export const QuestionList = styled.div`
@@ -41,4 +58,13 @@ export const QuestionList = styled.div`
   opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
   overflow: ${({ isOpen }) => isOpen ? 'none' : 'hidden'};
   transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 25rem;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+  }
 `

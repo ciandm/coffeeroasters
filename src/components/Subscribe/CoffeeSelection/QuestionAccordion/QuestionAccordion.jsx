@@ -62,7 +62,9 @@ function QuestionAccordion({
         disabled={disabled}
         onClick={!disabled ? () => setOpen(prevOpen => !prevOpen) : null}>
         <S.Question>{question}</S.Question>
-        <Icon />
+        <S.DropdownButton>
+          <Icon />
+        </S.DropdownButton>
       </S.QuestionWrapper>
       <S.QuestionList isOpen={open && !disabled}>
         {

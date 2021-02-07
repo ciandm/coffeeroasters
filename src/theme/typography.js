@@ -24,9 +24,13 @@ const H2 = styled.h2`
   font-size: 2.4rem;
   line-height: 2.8rem;
 
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 4rem;
   }
 `
 

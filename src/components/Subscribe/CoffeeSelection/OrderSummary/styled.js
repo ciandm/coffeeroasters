@@ -10,6 +10,15 @@ export const OrderSummary = styled.div`
   flex-direction: column;
   margin: 12rem 0 5.6rem;
   padding: 2.4rem 3.2rem;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    margin-top: 14rem; 
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    margin-top: 8.8rem;
+    padding: 2.8rem 6.4rem;
+  }
 `
 
 export const Title = styled(Body)`
