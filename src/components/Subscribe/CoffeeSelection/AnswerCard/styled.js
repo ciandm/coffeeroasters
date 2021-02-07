@@ -21,6 +21,7 @@ export const Card = styled.button`
   flex-direction: column;
   outline: none;
   padding: 2.4rem;
+  text-align: left;
 
   &:hover,
   &:focus {
@@ -29,7 +30,6 @@ export const Card = styled.button`
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 3.2rem 2.4rem;
-    text-align: left;
   }
 `
 
