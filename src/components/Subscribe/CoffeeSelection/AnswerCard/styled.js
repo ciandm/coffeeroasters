@@ -13,7 +13,7 @@ const colorWhite = css`
 `
 
 export const Card = styled.div`
-  ${({ isSelected, theme }) => (isSelected ? backgroundCyan : `background-color: ${theme.colours.darkCream}`)};
+  ${({ selected, theme }) => (selected ? backgroundCyan : `background-color: ${theme.colours.darkCream}`)};
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -21,15 +21,15 @@ export const Card = styled.div`
   padding: 2.4rem;
 
   &:hover {
-    background-color: ${({ theme, isSelected }) => isSelected ? '' : theme.colours.paleOrange};
+    background-color: ${({ theme, selected }) => selected ? '' : theme.colours.paleOrange};
   }
 `
 
 export const Title = styled(H4)`
-  ${({ isSelected, theme }) => (isSelected ? colorWhite : `color: ${theme.colours.darkGreyBlue}`)};
+  ${({ selected, theme }) => (selected ? colorWhite : `color: ${theme.colours.darkGreyBlue}`)};
   margin-bottom: 8px;
 `
 
 export const Description = styled(Body)`
-  ${({ isSelected, theme }) => (isSelected ? colorWhite : `color: ${theme.colours.darkGreyBlue}`)};
+  ${({ selected, theme }) => (selected ? colorWhite : `color: ${theme.colours.darkGreyBlue}`)};
 `

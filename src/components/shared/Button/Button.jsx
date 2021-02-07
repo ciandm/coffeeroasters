@@ -4,10 +4,11 @@ import * as S from './styled';
 
 const Button = ({
   label,
-  link
+  link,
+  ...restProps
 }) => {
   return (
-    <S.Button>
+    <S.Button {...restProps}>
       {label}
     </S.Button>
   )

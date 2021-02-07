@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   H2
 } from '../../../../theme/typography'
@@ -10,10 +10,16 @@ export const Container = styled.div`
 
 export const QuestionWrapper = styled.div`
   align-items: center;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3.2rem;
   width: 100%;
+
+  ${({ disabled }) => disabled && css`
+  cursor: not-allowed;
+  opacity: .5;
+  `}
 
   & svg {
     ${({ isOpen }) => isOpen ? 'transform: rotate(180deg)' : ''};
