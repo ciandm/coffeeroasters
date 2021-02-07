@@ -5,8 +5,9 @@ import { useSubscription } from '../../SubscriptionProvider/SubscriptionProvider
 
 function OrderSummary() {
 
-  const { subscription } = useSubscription()
-  const orderSummarySentences = summarizeOrder(subscription);
+  const { subscription } = useSubscription();
+  const { selection } = subscription;
+  const orderSummarySentences = summarizeOrder(selection);
   return (
     <S.OrderSummary>
       <S.Title>Order summary</S.Title>

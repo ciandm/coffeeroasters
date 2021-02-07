@@ -4,10 +4,14 @@ import * as S from './styled';
 import QuestionAccordion from './QuestionAccordion';
 import OrderSummary from './OrderSummary'
 import Button from '../../shared/Button';
+import { useSubscription } from '../SubscriptionProvider/SubscriptionProvider';
 
 function CoffeeSelection({
   selectionOptions
 }) {
+
+  const { subscription } = useSubscription();
+  const { selection, stepsCompleted } = subscription;
   return (
     <S.PlanWrapper>
       <S.PlanSelection>
@@ -23,7 +27,7 @@ function CoffeeSelection({
           }
         </S.QuestionGrid>
         <OrderSummary />
-        <Button />
+        <Button disabled={selection.preference === 'Capsule' ? stepsCompleted < selectionOptions.length - 1 : stepsCompleted < selectionOptions.length} />
       </S.PlanSelection>
     </S.PlanWrapper>
   )

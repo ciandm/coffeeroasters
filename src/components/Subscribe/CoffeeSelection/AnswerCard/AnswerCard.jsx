@@ -6,7 +6,8 @@ import * as S from './styled';
 const AnswerCard = ({
   answer,
   description,
-  selectionId
+  selectionId,
+  questionNumber
 }) => {
 
   const {
@@ -14,19 +15,25 @@ const AnswerCard = ({
     selectOption
   } = useSubscription();
 
+  const { selection } = subscription;
 
   return (
     <S.Card
-      selected={subscription[selectionId] === answer}
-      onClick={() => selectOption({ id: selectionId, name: answer })}/*  */
+      selected={selection[selectionId] === answer}
+      onClick={() => selectOption({ id: selectionId, name: answer, questionNumber })}
     >
       <S.Title
-        selected={subscription[selectionId] === answer}
+        selected={selection[selectionId] === answer}
       >{answer}</S.Title>
       <S.Description
-        selected={subscription[selectionId] === answer}
+        selected={selection[selectionId] === answer}
       >
-        {selectionId === 'delivery' ? description[subscription.weight] : description}</S.Description>
+        {
+          /* Access prices based on weight if the selection is about delivery 
+            Show correct prices if user has selected a weight, otherwise default prices to 250g*/
+        }
+        {selectionId === 'delivery' ? description[selection.weight] ?? description['250g'] : description}
+      </S.Description>
     </S.Card>
   )
 }

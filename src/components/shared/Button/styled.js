@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
 
 export const Button = styled(Link)`
@@ -10,13 +10,15 @@ export const Button = styled(Link)`
   font-family: 'Fraunces', sans-serif;
   line-height: 2.5rem;
   padding: 1.6rem 8rem;
+  text-align: center;
   text-decoration: none;
 
   &:hover {
-    background-color: hsl(179,55%,61%);
+    background-color: ${({ disabled }) => disabled ? '' : 'hsl(179,55%,61%)'};
   }
 
-  &:disabled {
+  ${({ disabled }) => disabled && css`
+    cursor: not-allowed;
     background-color: hsl(25,11%,87%);
-  }
+  `}
 `
