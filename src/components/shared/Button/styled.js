@@ -12,7 +12,7 @@ export const Button = styled(Link)`
   font-family: 'Fraunces', sans-serif;
   line-height: 2.5rem;
   outline: none;
-  padding: 1.6rem 8rem;
+  padding: 1.6rem 3rem;
   text-align: center;
   text-decoration: none;
 

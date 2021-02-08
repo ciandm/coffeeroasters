@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import {
   H3,
+  H4,
   Body
 } from '../../../theme/typography'
 
@@ -109,6 +110,10 @@ export const Container = styled.div`
     }
   }
 
+  & a {
+    margin-top: 4.8rem;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 11.2rem 4rem;
   }
@@ -118,4 +123,9 @@ export const Container = styled.div`
     max-width: 128rem;
     padding: 11.6rem 8.4rem 10rem;
   }
+`
+
+export const Tagline = styled(H4)`
+  color: ${({ theme }) => theme.colours.grey};
+  margin-bottom: 5.6rem;
 `

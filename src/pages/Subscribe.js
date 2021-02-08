@@ -9,7 +9,7 @@ function Subscribe() {
     <div>
       <SimpleSteps
         variation="dark"
-        steps={subscribeData.steps}
+        {...subscribeData.simpleSteps}
       />
       <SubscriptionProvider>
         <CoffeeSelection

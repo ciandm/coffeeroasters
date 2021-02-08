@@ -8,7 +8,9 @@ const Button = ({
   ...restProps
 }) => {
   return (
-    <S.Button {...restProps}>
+    <S.Button
+      to={link}
+      {...restProps}>
       {label}
     </S.Button>
   )

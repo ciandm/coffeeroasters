@@ -1,10 +1,16 @@
 import React from 'react'
-import Button from '../components/shared/Button';
+import homeData from './pageData/homeData';
+
+// COMPONENTS
+import SimpleSteps from '../components/shared/SimpleSteps/SimpleSteps';
 
 function Home() {
   return (
     <div>
-      <Button />
+      <SimpleSteps
+        variation="light"
+        {...homeData.simpleSteps}
+      />
     </div>
   )
 }
