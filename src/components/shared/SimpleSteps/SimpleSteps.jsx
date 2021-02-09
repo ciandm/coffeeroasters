@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 // COMPONENTS
 import Button from '../Button';
-import ROUTES from '../../../pages/routes';
 
 const SimpleSteps = ({
   steps,

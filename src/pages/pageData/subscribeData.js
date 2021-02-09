@@ -1,4 +1,17 @@
 const subscribeData = {
+  heroSection: {
+    containerHeight: 40, // rem amount
+    backgroundImages: {
+      mobile: require('../../assets/plan/mobile/image-hero-blackcup.jpg').default,
+      tablet: require('../../assets/plan/tablet/image-hero-blackcup.jpg').default,
+      desktop: require('../../assets/plan/desktop/image-hero-blackcup.jpg').default,
+    },
+    title: {
+      text: "Create a plan",
+      muted: false // doesn't have smaller text for the title
+    },
+    intro: "Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.",
+  },
   // steps to subscribing
   simpleSteps: {
     steps: [

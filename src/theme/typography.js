@@ -38,8 +38,14 @@ const H3 = styled.h3`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+  
 `
 
 const H4 = styled.h4`

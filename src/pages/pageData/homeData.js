@@ -1,6 +1,23 @@
 import ROUTES from '../routes';
 
 const homeData = {
+  heroSection: {
+    containerHeight: 50, // rem amount
+    backgroundImages: {
+      mobile: require('../../assets/home/mobile/image-hero-coffeepress.jpg').default,
+      tablet: require('../../assets/home/tablet/image-hero-coffeepress.jpg').default,
+      desktop: require('../../assets/home/desktop/image-hero-coffeepress.jpg').default,
+    },
+    title: {
+      text: "Great coffee made simple.",
+      muted: false // doesn't have smaller text for the title
+    },
+    intro: "Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.",
+    button: {
+      label: "Create your plan",
+      link: ROUTES.SUBSCRIBE
+    }
+  },
   // steps to subscribing
   simpleSteps: {
     tagline: "How it works",

@@ -93,6 +93,8 @@ export const Description = styled(Body)``
 export const Container = styled.div`
   background-color: ${({ variation, theme }) => variation === 'dark' ? theme.colours.darkGreyBlue : 'transparent'};
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
   margin: 6rem 0;
   padding: 8rem 2.4rem;
 
@@ -111,7 +113,12 @@ export const Container = styled.div`
   }
 
   & a {
+    align-self: center;
     margin-top: 4.8rem;
+
+    @media ${({ theme }) => theme.mediaQueries.tablet} {
+      align-self: flex-start;
+    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
@@ -127,5 +134,11 @@ export const Container = styled.div`
 
 export const Tagline = styled(H4)`
   color: ${({ theme }) => theme.colours.grey};
-  margin-bottom: 5.6rem;
+  margin-bottom: 8rem;
+  text-align: center;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    margin-bottom: 5.6rem;
+    text-align: left;
+  }
 `
