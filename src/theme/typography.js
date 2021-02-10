@@ -4,17 +4,35 @@ const BigTitle = styled.h1`
   font-family: Fraunces;
   font-style: normal;
   font-weight: 900;
-  font-size: 150px;
-  line-height: 72px;
+  font-size: 4rem;
+  line-height: 7.2rem;
   text-transform: lowercase;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    font-size: 9.6rem;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    font-size: 15rem;
+  }
 `
 
 const H1 = styled.h1`
   font-family: Fraunces;
   font-style: normal;
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 72px;
+  font-size: ${({ muted }) => muted ? '2.8rem' : '4rem'};
+  line-height: ${({ muted }) => muted ? '2.8rem' : '4rem'};
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    font-size: ${({ muted }) => muted ? '3.2rem' : '4.8rem'};
+    line-height: ${({ muted }) => muted ? '4rem' : '4.8rem'};
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    font-weight: 900;
+    font-size: ${({ muted }) => muted ? '4rem' : '7.2rem'};
+    line-height: ${({ muted }) => muted ? '4.8rem' : '7.2rem'};
+  }
 `
 
 const H2 = styled.h2`

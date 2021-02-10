@@ -22,18 +22,20 @@ function HeroImage({
         <S.Wrapper
           images={backgroundImages}
         >
-          <S.Title
-            muted={muted}>
-            {text}
-          </S.Title>
-          <S.Intro>{intro}</S.Intro>
-          {
-            button &&
-            <Button
-              label={button.label}
-              link={button.link}
-            />
-          }
+          <S.Content>
+            <S.Title
+              muted={muted}>
+              {text}
+            </S.Title>
+            <S.Intro>{intro}</S.Intro>
+            {
+              button &&
+              <Button
+                label={button.label}
+                link={button.link}
+              />
+            }
+          </S.Content>
         </S.Wrapper>
       </S.Container>
     </S.Outer>

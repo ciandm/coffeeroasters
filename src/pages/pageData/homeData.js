@@ -18,6 +18,36 @@ const homeData = {
       link: ROUTES.SUBSCRIBE
     }
   },
+  // collection of coffee
+  ourCollection: {
+    title: "Our collection",
+    collection: [
+      {
+        id: "gran-espresso",
+        image: require('../../assets/home/desktop/image-gran-espresso.png').default,
+        name: "Gran Espresso",
+        description: "Light and flavorful blend with cocoa and black pepper for an intense experience"
+      },
+      {
+        id: "planalto",
+        image: require('../../assets/home/desktop/image-planalto.png').default,
+        name: "Planalto",
+        description: "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts"
+      },
+      {
+        id: "piccollo",
+        image: require('../../assets/home/desktop/image-piccollo.png').default,
+        name: "Piccollo",
+        description: "Mild and smooth blend featuring notes of toasted almond and dried cherry "
+      },
+      {
+        id: "danche",
+        image: require('../../assets/home/desktop/image-danche.png').default,
+        name: "Danche",
+        description: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes"
+      },
+    ]
+  },
   // steps to subscribing
   simpleSteps: {
     tagline: "How it works",

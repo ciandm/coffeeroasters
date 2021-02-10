@@ -90,7 +90,7 @@ export const Title = styled(H3)`
 
 export const Description = styled(Body)``
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: ${({ variation, theme }) => variation === 'dark' ? theme.colours.darkGreyBlue : 'transparent'};
   border-radius: 1rem;
   display: flex;

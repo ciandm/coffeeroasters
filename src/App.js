@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+//COMPONENTS
+import ScrollToTop from './utils/ScrollToTop';
 // PAGES
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,6 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route path={ROUTES.ABOUT}>
             <About />

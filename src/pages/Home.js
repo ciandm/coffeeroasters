@@ -4,12 +4,18 @@ import homeData from './pageData/homeData';
 // COMPONENTS
 import SimpleSteps from '../components/shared/SimpleSteps';
 import HeroImage from '../components/shared/HeroImage';
+import Nav from '../components/shared/Nav';
+import OurCollection from '../components/Home/OurCollection';
 
 function Home() {
   return (
     <div>
+      <Nav />
       <HeroImage
         {...homeData.heroSection}
+      />
+      <OurCollection
+        {...homeData.ourCollection}
       />
       <SimpleSteps
         variation="light"
