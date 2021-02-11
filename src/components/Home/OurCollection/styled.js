@@ -11,6 +11,10 @@ export const Section = styled.section`
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     padding: 7.2rem 0;
   }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    padding: 8.4rem 0;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -24,7 +28,7 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     margin: 0 auto;
     max-width: 111rem;
-    padding: 22.2rem 0 10rem;
+    padding: 2.4rem 0 0;
   }
 `
 

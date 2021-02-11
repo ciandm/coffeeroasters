@@ -126,9 +126,9 @@ export const Container = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    margin: 8.4rem auto;
+    margin: 0 auto;
     max-width: 128rem;
-    padding: 11.6rem 8.4rem 10rem;
+    padding: 10rem 8.4rem 10rem;
   }
 `
 

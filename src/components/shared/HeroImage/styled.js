@@ -10,7 +10,7 @@ export const Outer = styled.section`
   margin: 0 auto;
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    padding: 0;
+    padding: 0 0 8.4rem;
   }
 `
 

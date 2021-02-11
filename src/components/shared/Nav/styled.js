@@ -1,7 +1,4 @@
 import styled from 'styled-components'
-import {
-  SmallCaps
-} from '../../../theme/typography';
 import HAMBURGER from '../../../assets/shared/mobile/icon-hamburger.svg';
 import CLOSE from '../../../assets/shared/mobile/icon-close.svg';
 import { NavLink } from 'react-router-dom'
@@ -12,6 +9,14 @@ export const Nav = styled.nav`
   padding: 3.2rem 2.4rem;
   position: relative;
   z-index: 100;
+
+  @media ${({ theme }) => theme.mediaQueries.tablet} {
+    padding: 4rem;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
+    padding: 5rem 0;
+  }
 `
 
 export const NavWrapper = styled.div`
@@ -62,6 +67,7 @@ export const NavItems = styled.ul`
   @media ${({ theme }) => theme.mediaQueries.tablet} {
     display: flex;
     flex-direction: row;
+    padding: 0;
     position: initial;
     width: auto;
 
@@ -91,6 +97,7 @@ export const NavItem = styled(NavLink)`
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 1px;
+    padding: 0;
     text-transform: uppercase;
 
     & + & {
