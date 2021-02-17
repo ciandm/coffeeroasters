@@ -95,8 +95,7 @@ export const Container = styled.section`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  margin: 6rem 0;
-  padding: 8rem 2.4rem;
+  padding: 6rem 2.4rem;
 
   & ${Title} {
     color: ${({ variation, theme }) => variation === 'dark' ? '#FFF' : theme.colours.darkGreyBlue};
@@ -122,7 +121,7 @@ export const Container = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
-    padding: 11.2rem 4rem;
+    padding: 7.2rem 4rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {

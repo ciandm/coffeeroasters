@@ -48,6 +48,31 @@ const homeData = {
       },
     ]
   },
+  // why choose us section
+  whyChooseUs: {
+    title: "Why choose us?",
+    intro: "A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.",
+    cards: [
+      {
+        id: "best-quality",
+        icon: require('../../assets/home/desktop/icon-coffee-bean.svg').default,
+        title: "Best quality",
+        text: "Discover an endless variety of the world’s best artisan coffee from each of our roasters."
+      },
+      {
+        id: "exclusive-benefits",
+        icon: require('../../assets/home/desktop/icon-gift.svg').default,
+        title: "Exclusive benefits",
+        text: "Special offers and swag when you subscribe, including 30% off your first shipment."
+      },
+      {
+        id: "free-shipping",
+        icon: require('../../assets/home/desktop/icon-truck.svg').default,
+        title: "Free shipping",
+        text: "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed."
+      },
+    ]
+  },
   // steps to subscribing
   simpleSteps: {
     tagline: "How it works",

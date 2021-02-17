@@ -6,6 +6,7 @@ import SimpleSteps from '../components/shared/SimpleSteps';
 import HeroImage from '../components/shared/HeroImage';
 import Nav from '../components/shared/Nav';
 import OurCollection from '../components/Home/OurCollection';
+import WhyChooseUs from '../components/Home/WhyChooseUs/WhyChooseUs';
 
 function Home() {
   return (
@@ -16,6 +17,9 @@ function Home() {
       />
       <OurCollection
         {...homeData.ourCollection}
+      />
+      <WhyChooseUs
+        {...homeData.whyChooseUs}
       />
       <SimpleSteps
         variation="light"
