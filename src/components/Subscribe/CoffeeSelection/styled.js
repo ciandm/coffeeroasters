@@ -26,6 +26,10 @@ export const PlanSelection = styled.div`
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     grid-column: 5 / -1;
+
+    & button {
+      align-self: flex-end;
+    }
   }
 `
 

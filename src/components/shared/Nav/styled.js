@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import HAMBURGER from '../../../assets/shared/mobile/icon-hamburger.svg';
 import CLOSE from '../../../assets/shared/mobile/icon-close.svg';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import { SmallCaps } from '../../../theme/typography'
 
 export const Nav = styled.nav`
   display: flex;
@@ -91,14 +92,9 @@ export const NavItem = styled(NavLink)`
   }
 
   @media ${({ theme }) => theme.mediaQueries.tablet} {
-    font-family: "Barlow";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 1px;
+    ${SmallCaps};
+    color: ${({ theme }) => theme.colours.grey};
     padding: 0;
-    text-transform: uppercase;
 
     & + & {
       margin-left: 3.2rem;

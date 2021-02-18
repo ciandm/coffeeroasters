@@ -6,10 +6,11 @@ import CoffeeSelection from '../components/Subscribe/CoffeeSelection';
 import SubscriptionProvider from '../components/Subscribe/SubscriptionProvider';
 import SimpleSteps from '../components/shared/SimpleSteps';
 import HeroImage from '../components/shared/HeroImage';
+import Footer from '../components/shared/Footer';
 
 function Subscribe() {
   return (
-    <div>
+    <>
       <Nav />
       <HeroImage
         {...subscribeData.heroSection}
@@ -24,7 +25,8 @@ function Subscribe() {
           selectionOptions={subscribeData.selection}
         />
       </SubscriptionProvider>
-    </div>
+      <Footer />
+    </>
   )
 }
 

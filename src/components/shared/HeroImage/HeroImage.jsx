@@ -59,5 +59,5 @@ HeroImage.propTypes = {
   button: PropTypes.shape({
     label: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-  }).isRequired
+  })
 }

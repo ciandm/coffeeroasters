@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const BigTitle = styled.h1`
   font-family: Fraunces;
@@ -82,13 +82,14 @@ const Body = styled.p`
   line-height: 26px;
 `
 
-const SmallCaps = styled.p`
+const SmallCaps = css`
   font-family: Barlow;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 1px;
+  text-transform: uppercase;
 `
 
 export {

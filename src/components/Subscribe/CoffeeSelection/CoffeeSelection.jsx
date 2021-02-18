@@ -45,6 +45,7 @@ function CoffeeSelection({
         <Button
           disabled={selection.preference === 'Capsule' ? stepsCompleted < selectionOptions.length - 1 : stepsCompleted < selectionOptions.length}
           as="button"
+          label="Create my plan!"
         />
       </S.PlanSelection>
     </S.PlanWrapper>

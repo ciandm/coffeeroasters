@@ -6,11 +6,12 @@ import SimpleSteps from '../components/shared/SimpleSteps';
 import HeroImage from '../components/shared/HeroImage';
 import Nav from '../components/shared/Nav';
 import OurCollection from '../components/Home/OurCollection';
-import WhyChooseUs from '../components/Home/WhyChooseUs/WhyChooseUs';
+import WhyChooseUs from '../components/Home/WhyChooseUs';
+import Footer from '../components/shared/Footer';
 
 function Home() {
   return (
-    <div>
+    <>
       <Nav />
       <HeroImage
         {...homeData.heroSection}
@@ -25,7 +26,8 @@ function Home() {
         variation="light"
         {...homeData.simpleSteps}
       />
-    </div>
+      <Footer />
+    </>
   )
 }
 

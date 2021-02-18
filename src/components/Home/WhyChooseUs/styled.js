@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {
   H2,
   H4,
@@ -14,6 +14,7 @@ export const Section = styled.section`
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-direction: row;
+    padding: 8.4rem 0 10rem;
   }
 `
 
@@ -192,7 +193,7 @@ export const Headline = styled(H4)`
     padding: 0;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.tablet} {
+  @media ${({ theme }) => theme.mediaQueries.desktop} {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     padding-top: 3.2rem;
@@ -201,7 +202,7 @@ export const Headline = styled(H4)`
 
 export const Description = styled(Body)`
   @media ${({ theme }) => theme.mediaQueries.tablet} {
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
     grid-row: unset;
   }
 

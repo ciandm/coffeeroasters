@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import * as S from './styled'
 
 function WhyChooseUs({
@@ -34,3 +35,9 @@ function WhyChooseUs({
 }
 
 export default WhyChooseUs
+
+WhyChooseUs.propTypes = {
+  title: PropTypes.string.isRequired,
+  intro: PropTypes.string.isRequired,
+  cards: PropTypes.array.isRequired,
+}
