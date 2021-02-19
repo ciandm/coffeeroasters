@@ -10,7 +10,7 @@ export const Footer = styled.footer`
   }
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
-    padding: 8.4rem;
+    padding: 8.4rem 0;
   }
 `
 
@@ -25,6 +25,7 @@ export const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.mediaQueries.desktop} {
     flex-direction: row;
+    max-width: 128rem;
     padding: 4.8rem 8.4rem;
   }
 `

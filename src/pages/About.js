@@ -5,6 +5,8 @@ import HeroImage from '../components/shared/HeroImage';
 import Footer from '../components/shared/Footer';
 // DATA
 import aboutData from '../pages/pageData/aboutData';
+import OurCommitment from '../components/About/OurCommitment';
+import UncompromisingQuality from '../components/About/UncompromisingQuality';
 
 function About() {
   return (
@@ -12,6 +14,12 @@ function About() {
       <Nav />
       <HeroImage
         {...aboutData.heroSection}
+      />
+      <OurCommitment
+        {...aboutData.ourCommitment}
+      />
+      <UncompromisingQuality
+        {...aboutData.uncompromisingQuality}
       />
       <Footer />
     </>
