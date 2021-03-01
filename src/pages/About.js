@@ -7,6 +7,7 @@ import Footer from '../components/shared/Footer';
 import aboutData from '../pages/pageData/aboutData';
 import OurCommitment from '../components/About/OurCommitment';
 import UncompromisingQuality from '../components/About/UncompromisingQuality';
+import Headquarters from '../components/About/Headquarters';
 
 function About() {
   return (
@@ -20,6 +21,9 @@ function About() {
       />
       <UncompromisingQuality
         {...aboutData.uncompromisingQuality}
+      />
+      <Headquarters 
+        {...aboutData.ourHeadquarters}
       />
       <Footer />
     </>

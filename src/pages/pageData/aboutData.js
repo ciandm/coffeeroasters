@@ -29,6 +29,26 @@ const aboutData = {
     },
     title: "Uncompromising quality",
     text: "Although we work with growers who pay close attention to all stages of harvest and processing, we employ, on our end, a rigorous quality control program to avoid over-roasting or baking the coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable."
+  },
+  ourHeadquarters: {
+    title: "Our headquarters",
+    headquarters: [
+      {
+        icon: require('../../assets/about/desktop/illustration-uk.svg').default,
+        country: 'United Kingdom',
+        address: ['68 Asfordby Rd', 'Alcaston', 'SY61YA', '++44 1241 918425']
+      },
+      {
+        icon: require('../../assets/about/desktop/illustration-canada.svg').default,
+        country: 'Canada',
+        address: ['1518 Eglinton Avenue', 'Toronto', 'Ontario M4P 1A6', '+1 416 485 2997']
+      },
+      {
+        icon: require('../../assets/about/desktop/illustration-australia.svg').default,
+        country: 'Australia',
+        address: ['36 Swanston Street', 'Kewell', 'Victoria', '+61 4 9928 3629']
+      },
+    ]
   }
 }
 

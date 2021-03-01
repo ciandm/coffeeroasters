@@ -53,7 +53,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-family: Fraunces;
+  font-family: Fraunces; 
   font-style: normal;
   font-weight: 900;
   font-size: 2.8rem;
