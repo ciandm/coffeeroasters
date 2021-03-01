@@ -7,6 +7,7 @@ import SubscriptionProvider from '../components/Subscribe/SubscriptionProvider';
 import SimpleSteps from '../components/shared/SimpleSteps';
 import HeroImage from '../components/shared/HeroImage';
 import Footer from '../components/shared/Footer';
+import Modal from '../components/Subscribe/Modal';
 
 function Subscribe() {
   return (
@@ -24,6 +25,7 @@ function Subscribe() {
           listItems={subscribeData.listItems}
           selectionOptions={subscribeData.selection}
         />
+        <Modal />
       </SubscriptionProvider>
       <Footer />
     </>
