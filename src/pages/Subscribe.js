@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import subscribeData from './pageData/subscribeData';
 // COMPONENTS
 import Nav from '../components/shared/Nav';
@@ -10,6 +10,10 @@ import Footer from '../components/shared/Footer';
 import Modal from '../components/Subscribe/Modal';
 
 function Subscribe() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <>
       <Nav />
@@ -24,8 +28,12 @@ function Subscribe() {
         <CoffeeSelection
           listItems={subscribeData.listItems}
           selectionOptions={subscribeData.selection}
+          openModal={openModal}
         />
-        <Modal />
+        <Modal 
+          isOpen={modalOpen}
+          closeModal={closeModal}
+        />
       </SubscriptionProvider>
       <Footer />
     </>

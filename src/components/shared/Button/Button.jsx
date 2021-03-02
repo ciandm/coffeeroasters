@@ -5,11 +5,13 @@ import * as S from './styled';
 const Button = ({
   label,
   link,
+  clickHandler,
   ...restProps
 }) => {
   return (
     <S.Button
       to={link}
+      onClick={clickHandler ? () => clickHandler() : null}
       {...restProps}>
       {label}
     </S.Button>
@@ -24,6 +26,5 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  label: 'Click me',
-  link: '/'
+  label: 'Click me'
 }

@@ -12,7 +12,8 @@ import useWindowSize from '../../../hooks/useWindowSize';
 
 function CoffeeSelection({
   listItems,
-  selectionOptions
+  selectionOptions,
+  openModal
 }) {
 
   const windowSize = useWindowSize();
@@ -46,6 +47,7 @@ function CoffeeSelection({
           disabled={selection.preference === 'Capsule' ? stepsCompleted < selectionOptions.length - 1 : stepsCompleted < selectionOptions.length}
           as="button"
           label="Create my plan!"
+          clickHandler={openModal}
         />
       </S.PlanSelection>
     </S.PlanWrapper>
@@ -55,5 +57,7 @@ function CoffeeSelection({
 export default CoffeeSelection
 
 CoffeeSelection.propTypes = {
+  listItems: PropTypes.array.isRequired,
   selectionOptions: PropTypes.array.isRequired,
+  openModal: PropTypes.func.isRequired,
 }
