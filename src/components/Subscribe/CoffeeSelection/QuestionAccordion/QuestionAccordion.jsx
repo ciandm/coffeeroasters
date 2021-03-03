@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as S from './styled';
 import { ReactComponent as Icon } from '../../../../assets/plan/desktop/icon-arrow.svg';
 import AnswerCard from '../AnswerCard';
@@ -17,8 +17,7 @@ function QuestionAccordion({
   const { selection, currentStep } = subscription;
 
   const [open, setOpen] = useState(false);
-  const [disabled, setDisabled] = useState(false);
-  const isMounted = useRef(false);
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     // if the user selects capsules, we need to disable the option to select
@@ -26,35 +25,23 @@ function QuestionAccordion({
     if (selection.preference === 'Capsule' && id === 'grind') {
       setDisabled(true);
       setOpen(false);
-    } else {
-      setDisabled(false);
     }
   }, [selection.preference, id])
 
+  // when the iteration or currentStep changes, check to enable the accordion and open it
+  // for selection. 
   useEffect(() => {
-    isMounted.current = true;
-  }, [])
-
-  // if the component is mounted, check if it has been disabled and if so, close the accordion
-  useEffect(() => {
-    if (isMounted.current) {
-      if (disabled) {
-        setOpen(false)
-      } else {
-        setOpen(true)
-      }
-    }
-  }, [disabled, isMounted])
-
-  // open accordions if the current step is greater or equal to the iteration of the question
-  useEffect(() => {
-    if (iteration <= currentStep) {
+    if(iteration === currentStep) {
+      setDisabled(false);
       setOpen(true)
-    } else {
+    }
+
+    // if the iteration is greater, i.e. the user has deselected a previous option, then close those after it.
+    if(iteration > currentStep) {
+      setDisabled(true);
       setOpen(false);
     }
   }, [iteration, currentStep])
-
 
   return (
     <S.Container>

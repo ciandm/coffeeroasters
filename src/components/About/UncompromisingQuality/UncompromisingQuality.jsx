@@ -27,3 +27,13 @@ function UncompromisingQuality({
 }
 
 export default UncompromisingQuality
+
+UncompromisingQuality.propTypes = {
+  images: PropTypes.shape({
+    mobile: PropTypes.string,
+    tablet: PropTypes.string,
+    desktop: PropTypes.string,
+  }).isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+}

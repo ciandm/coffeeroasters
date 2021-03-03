@@ -19,6 +19,7 @@ export const Card = styled.button`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 100%;
   outline: none;
   padding: 2.4rem;
   text-align: left;

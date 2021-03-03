@@ -21,7 +21,7 @@ const ACTIONS = {
   DESELECT: 'deselect',
   RESET_GRIND: 'reset-grind',
   INCREMENT_CURRENT_STEP: 'increment-current-step',
-  CATCH_UP_CURRENT_STEP: 'catch-up-current-step',
+  DECREMENT_CURRENT_STEP: 'decrement-current-step',
   INCREMENT_STEPS_COMPLETED: 'increment-steps-completed',
   DECREMENT_STEPS_COMPLETED: 'decrement-steps-completed'
 }
@@ -61,10 +61,10 @@ function reducer(state, action) {
         ...state,
         currentStep: state.currentStep + action.payload.amount
       }
-    case ACTIONS.CATCH_UP_CURRENT_STEP:
+    case ACTIONS.DECREMENT_CURRENT_STEP: 
       return {
         ...state,
-        currentStep: action.payload.questionNumber
+        currentStep: state.currentStep - action.payload.amount
       }
     // incrementing and decrementing steps completed, enables use of button when completed. That final number is minus 1 if capsules is selected.
     case ACTIONS.INCREMENT_STEPS_COMPLETED:
@@ -101,6 +101,12 @@ function SubscriptionProvider({ children }) {
         }
       });
       dispatch({
+        type: ACTIONS.DECREMENT_CURRENT_STEP,
+        payload: {
+          amount: 1
+        }
+      })
+      dispatch({
         type: ACTIONS.DECREMENT_STEPS_COMPLETED
       })
       return;
@@ -122,16 +128,6 @@ function SubscriptionProvider({ children }) {
           }
         })
       }
-    }
-
-    // if the user selects an option that is higher than the currentStep, bring the currentStep up to that number and open all of the corresponding accordions.
-    if (subscription.currentStep < option.questionNumber) {
-      dispatch({
-        type: ACTIONS.CATCH_UP_CURRENT_STEP,
-        payload: {
-          questionNumber: option.questionNumber
-        }
-      })
     }
 
     // select the option the user has chosen
