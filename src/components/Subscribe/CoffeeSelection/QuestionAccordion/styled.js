@@ -53,7 +53,7 @@ export const DropdownButton = styled.button`
 export const QuestionList = styled.div`
   display: grid;
   gap: 1.6rem;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
   max-height: ${({ isOpen }) => isOpen ? '1000px' : '0'};
   opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
   overflow: ${({ isOpen }) => isOpen ? 'none' : 'hidden'};
